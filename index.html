@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo Final JavaScript</title>
+    <!-- ICONO -->
+    <link rel="icon" type="image/x-icon" href="./icono.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <img src="./assests/images/logo.png" alt="Logotipo" class="logo">
+        <h1>CLASSIC ENGINE</h1>
+        <nav class="navigationBar">
+            <input type="checkbox" id="checkMenu" class="checkMenu">
+            <ul class="navigationBarList">
+                <li>
+                    <a href="#" class="navigationLink active">Inicio</a>
+                </li>
+                <li>
+                    <a href="./views/galeria.html" class="navigationLink">Producto</a>
+                </li>
+                <li>
+                    <a href="./views/presupuesto.html" class="navigationLink">Presupuesto</a>
+                </li>
+                <li>
+                    <a href="./views/contacto.html" class="navigationLink">Contacto</a>
+                </li>
+            </ul>
+            <label for="checkMenu" class="labelCheck">
+                <img src="./assests/images/menu-1-svgrepo-com.svg" alt="Logo Menu" class="imgMenu">
+            </label>
+        </nav>
+    </header>
+    <!-- MAIN -->
+    <div class="containerIndex">
+        <aside>
+            <div>
+                <div>
+                    <img src="./assests/images/conocenosAside.jpg" alt="imagen de Conocenos" class="asideImg">
+                </div>
+                <div>
+                    <h2>Classic Engine</h2>
+                    <p>Esto es una página web de una empresa imaginaria creada para un proyecto final de HTML,CSS y JS. Esta
+                        empresa se dedicaría a la compra, tasación, restauración, y venta de cualquier vehiculo, pero con
+                        predilección por los coches clásicos e historicos.</p> 
+                </div>
+            </div>    
+            <h3>Diferentes categorías de coches</h3>
+            <p>Aquí tienes algunas de las categorías de coches con las que trabajamos</p>
+            
+            <a href="#" class="videoLink">
+                <h4>Coches Clásicos</h4>
+                <img src="./assests/images/clasico.jpg" alt="Coche clásico" class="videoImg">
+            </a>
+            <a href="#" class="videoLink">
+                <h4>Coches Deportivos</h4>
+                <img src="./assests/images/deportivo.jpg" alt="Coche deportivo" class="videoImg">
+            </a>
+            <a href="#" class="videoLink">
+                <h4>Coches Eléctricos</h4>
+                <img src="./assests/images/electrico.jpg" alt="Coche electrico" class="videoImg">
+            </a>
+        </aside>
+        <section class="containerSection">
+            <h2>¡Últimas Ventas!</h2> 
+            <div class="modelContainer" id="modelContainer">
+
+            </div>
+            <h2>¡Novedades!</h2>
+            <article>
+                <h3>Modificación particular de vehiculo</h3>
+                <img src="./assests/images/custome.jpg" alt="Coche Modificado">
+                <p>Siguiendo el ejemplo americano, tenemos disponible como novedad la "customización" de tu vehiculo.</p>
+                <a href="#" class="readMore">Leer más</a>
+            </article>
+            <h2>Profesional</h2>
+            <article>
+                <h3>Furgones y Camiones</h3>
+                <img src="./assests/images/furgoneta.jpg" alt="Furgoneta">
+                <p>No solo ofrecemos vehiculos para el día a día o para exhibirlos, también ofrecemos vehiculos profesionales.</p>
+                <a href="#" class="readMore">Leer más</a>
+            </article>
+        </section>     
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <ul class="socialIcon">
+            <li class="iconElem">
+                <a href="https://www.youtube.com/" class="icon">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+            </li>
+            <li class="iconElem">
+                <a href="https://www.instagram.com/" class="icon">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+            <li class="iconElem">
+                <a href="https://www.facebook.com/" class="icon">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li class="iconElem">
+                <a href="https://x.com/" class="icon">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+            <li class="iconElem">
+                <a href="https://workspace.google.com/intl/es-419/gmail/" class="icon">
+                    <ion-icon name="mail-unread-outline"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <p class="copyright">C. de Olite, 43, 31004 Pamplona, Navarra<br>@Año | Todos los derechos reservados</p>
+    </footer>
+    <!-- SCRIPTS -->
+    <!-- SCRIPTS para IONICONS-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./js/scriptsIndex.js"></script>
+</body>
+
+</html>

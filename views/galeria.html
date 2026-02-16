@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Productos</title>
+     <!-- ICONO -->
+     <link rel="icon" type="image/x-icon" href="./../icono.ico">
+     <!-- CSS -->
+     <link rel="stylesheet" href="./../css/estilos.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <img src="./../assests/images/logo.png" alt="Logotipo" class="logo">
+        <h1>CLASSIC ENGINE</h1>
+        <nav class="navigationBar">  
+            <input type="checkbox" id="checkMenu" class="checkMenu">          
+            <ul class="navigationBarList">
+                <li>
+                    <a href="./../index.html" class="navigationLink">Inicio</a>
+                </li>
+                <li>
+                    <a href="#" class="navigationLink active">Producto</a>
+                </li>
+                <li>
+                    <a href="./../views/presupuesto.html" class="navigationLink">Presupuesto</a>
+                </li>
+                <li>
+                    <a href="./../views/contacto.html" class="navigationLink">Contacto</a>
+                </li>
+            </ul>
+            <label for="checkMenu" class="labelCheck">
+                <img src="./../assests/images/menu-1-svgrepo-com.svg" alt="Logo Menu" class="imgMenu">
+            </label>
+        </nav>
+    </header>
+    <!-- MAIN -->
+    <main class="containerGallery">
+        <h2 class="titleGallery">Galería de Productos</h2>
+        <div class="carouselContainer">
+            <button id="prevBtn" class="prevBtn">⬅</button>
+            <div id="carousel" class="carousel">
+                <div class="box inactive"></div>
+                <div class="box active"></div>
+                <div class="box inactive"></div>
+            </div>
+            <button id="nextBtn" class="nextBtn">⮕</button>
+        </div>
+       
+        <div id="dotsContainer" class="dotsContainer">
+
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <ul class="socialIcon">
+            <li class="iconElem">
+                <a href="https://www.youtube.com/" class="icon">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+            </li>
+            <li class="iconElem">
+                <a href="https://www.instagram.com/" class="icon">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+            <li class="iconElem">
+                <a href="https://www.facebook.com/" class="icon">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li class="iconElem">
+                <a href="https://x.com/" class="icon">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+            <li class="iconElem">
+                <a href="https://workspace.google.com/intl/es-419/gmail/" class="icon">
+                    <ion-icon name="mail-unread-outline"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <p class="copyright">C. de Olite, 43, 31004 Pamplona, Navarra<br>@Año | Todos los derechos reservados</p>
+    </footer>
+    <!-- SCRIPTS para IONICONS--> 
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./../js/scriptsGaleria.js"></script>
+</body>
+</html>

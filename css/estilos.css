@@ -1,0 +1,685 @@
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-* ESTILOS GENERALES *-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+/****** ESTILOS GENERAL ******/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: beige;
+}
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-* ESTILOS HEADER *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+header{
+    background-color: orange;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+}
+
+/****** HEADER: Navigation Bar ******/
+
+.navigationBarList{
+    list-style-type: none;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row; 
+    gap: 20px;
+    margin-right: 25px; 
+}
+
+.navigationLink{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navigationLink:hover{
+    color: black;
+    font-size: 25px;
+
+}
+
+.active{
+    color: brown;
+    font-size: 22px;
+}
+
+/****** HEADER: Pantalla Grande ******/
+
+.logo{
+    display: none;
+}
+
+h1{
+    margin: 2%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.checkMenu{
+    display: none;
+}
+
+.imgMenu{
+    display: none;
+    width: 60px;
+    height: 60px;
+}
+
+/****** Pantalla Media - Pequeña ******/
+
+@media(max-width: 768px){
+
+    .logo{
+        margin: 2%;
+        display: block;
+        height: 65px; 
+        width: auto;
+    }
+
+    .imgMenu{
+        display: block;
+    }
+
+    .navigationBarList{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        padding: 0;
+        width: 100%;
+        background-color: #fdba3f;
+        gap: 0;
+        opacity: 0.90;
+        margin-bottom: 0px;
+    }
+
+    .navigationLink{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+    }
+
+    .navigationLink:hover{
+        background-color: #ffcf76;
+        color: black;
+        opacity: 1;
+    }
+
+    .checkMenu:checked + .navigationBarList{
+        display: flex;
+    }
+
+}
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-* ESTILOS MAIN *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+/****** MAIN: Index ******/
+
+.containerIndex{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 85px;
+}
+
+/****** ASIDE ******/
+aside{
+    flex: 30%; 
+    max-width: 30%;
+    padding: 20px;
+    background-color:bisque;
+}
+
+aside > div{
+    margin-top: 40%;
+}
+
+aside h2{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+aside h3{
+    font-size: 1.3em;
+    letter-spacing: 1px;
+}
+ 
+.asideImg{
+    height: 90%;
+    width: 95%;
+    border-radius: 5%;
+}
+
+.videoLink img{
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.videoLink h4{
+    opacity: 0;
+    position: absolute;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+
+.videoLink h4:hover{
+    opacity: 1;
+}
+
+
+
+/****** SECTION ******/
+
+.containerSection{
+    flex: 70%;
+    max-width: 70%;
+    background-color: beige;
+    padding: 20px;
+}
+
+.containerSection h2{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    letter-spacing: 2px;
+}
+
+.containerSection img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.readMore{
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.readMore:hover{
+    font-size: 15px;
+}
+
+/****** SECTION MODELOS ******/
+.modelContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.carCard{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carCard img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.carCard h3{
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.carCard p{
+    margin: 5px 0;
+    color: #777;
+}
+
+.carCard:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgb(0, 0, 0, 0.2);
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-* ESTILOS GALERIA *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+.containerGallery{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    min-height: 95vh;
+}
+
+.titleGallery{
+    margin-top: 100px;
+    font-size: 2em;
+    text-align: center;
+}
+
+.carouselContainer{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 70%;
+    max-width: 800px;
+    margin-top: 25px;
+}
+
+.carousel{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.box{
+   display: flex;
+   flex: 1;
+   justify-content: center;
+   align-items: center;
+   height: 400px;
+   background-color: bisque;
+   border: 1px solid black; 
+   border-radius: 15px;
+   font-size: 24px;
+   color: #fff;
+}
+
+.active {
+    flex: 3;
+    transform: scale(1.2);
+    z-index: 10;
+
+}
+
+.inactive{
+    opacity: 0.5;
+    transform: scale(0.8);
+}
+
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.prevBtn , .nextBtn{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    top: 40%;
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 100;
+}
+.prevBtn:hover , .nextBtn:hover{
+    background-color: black;
+    color: #bbb;
+}
+
+.prevBtn{
+    left: -50px;
+}
+
+.nextBtn{
+    right: -50px;
+}
+
+.dotsContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.dot{
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dot.active{
+    background-color: #333;
+}
+
+/****** Pantalla Media ******/
+
+@media (max-width: 800px){
+
+    .box{
+        height: 300px;
+    }
+
+    .box img{
+        height: 100%;
+    }
+}
+
+/****** Pantalla Pequeña ******/
+
+@media (max-width: 600px){
+
+    .box{
+        height: 300px;
+    }
+
+    .box img{
+        height: 100%;
+    }
+}
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-* ESTILOS PRESUPUESTO *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+
+.containerForm{
+    background-color: bisque;
+    width: 85%;
+    max-width: 1200px;
+    margin: 15px auto 15px;
+    padding: 3% 0;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-top: 100px;
+}
+
+.containerForm *{
+    box-sizing: border-box;
+}
+
+.titleForm{
+    font-size: 2em;
+    text-align: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+fieldset{
+    background-color: rgb(253, 234, 211);
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 10px auto;
+    border: 1px solid grey;
+    border-radius: 10px;    
+    padding: 15px;  
+}
+
+legend{
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(253, 234, 211);
+    font-size: 1.1em;
+    text-align: left;
+}
+
+.inputContainer{
+    display: flex;  
+    flex-direction: column;
+    gap: 5px;
+}
+
+input{
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+select{
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid grey;
+    margin-bottom: 10px;
+}
+
+.inputExtra{
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.checkBoxExtra{
+    cursor: pointer;
+}
+
+.inputExtra > p{
+    margin-bottom: 10px;
+}
+
+.budget{
+    background-color: #fff;
+    border-bottom: 1px solid grey;
+}
+
+.buttonContainer{
+    display: flex;
+    gap: 10px;
+}
+
+.checkBox{
+    cursor: pointer;
+    text-align: left;
+}
+
+button{
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;   
+    border-radius: 10px;    
+    cursor: pointer;
+}
+
+button:hover{
+    font-size: 15px;
+    background-color: rgb(214, 215, 211);
+}
+
+.reset:hover{
+    background-color: rgb(252, 76, 76);
+}
+
+.submit:hover{
+    background-color: rgb(1, 255, 1);
+}
+
+.valido{
+    border-color: rgb(1, 255, 1);
+}
+
+.invalido{
+    border-color: red;
+}
+
+.error{
+    color: red;
+}
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-* ESTILOS CONTACTO *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+
+.containerContact{
+    width: 90%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.sectionContact{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+    padding: 20px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: bisque;
+}
+
+.boxContact{
+    max-width: 600px;
+}
+
+.titleContact{
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tableContact{
+    margin: 10px 15px;
+    border: none;
+}
+
+.tableContact tbody tr th{
+    margin-bottom: 10px;
+    padding: 5px;
+    text-align: justify;
+    width: 200px;
+    letter-spacing: 2px;
+}
+
+.tableContact tbody tr td{
+    text-align: center;
+
+}
+
+iframe{
+    border-radius: 2em;
+    border: none;
+    width: 500px;
+    height: 500px;
+    opacity: 0.9;
+    transition: 0.5s ease-in-out;
+}
+
+@media(max-width: 768px){
+
+    .containerContact{
+        width: 90%;
+        margin-top: 45px;
+        margin-left: 25px;
+    }
+
+    iframe{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-* ESTILOS FOOTER *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #fdba3f;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.socialIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 5px 5px;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+
+.iconElem{
+    list-style-type: none;
+}
+
+.icon{
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+.icon:hover{
+    transform: translateY(-10px);
+    font-size: 25px;
+    color: black;
+}
+
+.copyright{
+    color: white;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 15px;
+    height: min-content;
+}

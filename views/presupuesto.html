@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Presupuesto</title>
+    <!-- ICONO -->
+    <link rel="icon" type="image/x-icon" href="./../icono.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./../css/estilos.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <img src="./../assests/images/logo.png" alt="Logotipo" class="logo">
+        <h1>CLASSIC ENGINE</h1>
+        <nav class="navigationBar">
+            <input type="checkbox" id="checkMenu" class="checkMenu">
+            <ul class="navigationBarList">
+                <li>
+                    <a href="./../index.html" class="navigationLink">Inicio</a>
+                </li>
+                <li>
+                    <a href="./../views/galeria.html" class="navigationLink">Producto</a>
+                </li>
+                <li>
+                    <a href="#" class="navigationLink active">Presupuesto</a>
+                </li>
+                <li>
+                    <a href="./../views/contacto.html" class="navigationLink">Contacto</a>
+                </li>
+            </ul>
+            <label for="checkMenu" class="labelCheck">
+                <img src="./../assests/images/menu-1-svgrepo-com.svg" alt="Logo Menu" class="imgMenu">
+            </label>
+        </nav>
+    </header>
+    <!-- MAIN -->
+    <main class="containerForm">
+        <h2 class="titleForm">Formulario de Contacto</h2>
+        <form class="form" id="myForm" name="myForm" method="post" action="procesar.php">
+            <fieldset>
+                <legend>Datos Personales</legend>
+                <div class="inputContainer">
+                    <label for="firstName">Nombre: </label>
+                    <input type="text" id="firstName" name="nombre"
+                    placeholder="Escriba su nombre">
+                    <span class="error" id="errorName"></span>
+                </div>
+                <div class="inputContainer">
+                    <label for="surname">Apellidos: </label>
+                    <input type="text" id="surname" name="apellido" 
+                    placeholder="Escriba sus apellidos">
+                    <span class="error" id="errorSurname"></span>
+                </div>
+                <div class="inputContainer">
+                    <label for="telephone">Teléfono de Contacto: </label>
+                    <input type="text" id="telephone" name="telefono"
+                    placeholder="Escriba su número de teléfono">
+                    <span class="error" id="errorTelephone"></span>
+                </div>
+                <div class="inputContainer">
+                    <label for="email">Correo Electrónico: </label>
+                    <input type="text" id="email" name="email" 
+                     placeholder="Escriba su correo electrónico">
+                    <span class="error" id="errorEmail"></span>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Presupuesto</legend>
+                <div class="inputContainer">
+                    <label for="products">Producto: </label>
+                    <select name="producto" id="products">
+                        <option selected disabled>Selecciona un producto</option>
+                        <option value="100000">Vehículo de Exhibición</option>
+                        <option value="25000">Vehículo Diario</option>
+                        <option value="50000">Vehículo Profesional</option>
+                    </select>
+                </div>
+                <div class="inputContainer">
+                    <label for="time">Plazo: </label>
+                    <input type="number" id="time" name="plazo" min="0" max="12"
+                    placeholder="Introduce el plazo en meses">
+                    <span class="error" id="errorTime"></span>
+                </div>
+                <div class="inputExtra">
+                    <p>Elija los extras para el vehículo: </p>
+                    <label>
+                        <input type="checkbox" class="checkBoxExtra" value="5000">
+                        Cambio de Pintura
+                    </label>
+                    <label>
+                        <input type="checkbox" class="checkBoxExtra" value="2000">
+                        Accesorios de Comodidad
+                    </label>
+                    <label>
+                        <input type="checkbox" class="checkBoxExtra" value="10000">
+                        Modificación Estética
+                    </label>
+                    <label>
+                        <input type="checkbox" class="checkBoxExtra" value="15000">
+                        Modificación Mecánica
+                    </label>
+                </div>
+                <div class="inputContainer">
+                    <label>Presupuesto: </label>
+                    <p class="budget" id="budget"></p>
+                </div>
+            </fieldset>
+            <fieldset class="buttonContainer">
+                <legend>Aceptar Condiciones y Envío de Presupuesto</legend>
+                <div>
+                    <input class="checkBox" type="checkbox" id="checkTerms" name="privacidad">
+                    <label for="checkTerms">He leído y acepto política de privacidad</label>
+                </div>
+                <button class="reset" type="reset" id="reset">Borrar</button>
+                <button class="submit" type="submit" id="submit">Enviar</button>
+            </fieldset>
+        </form>
+       
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <ul class="socialIcon">
+            <li class="iconElem">
+                <a href="https://www.youtube.com/" class="icon">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+            </li>
+            <li class="iconElem">
+                <a href="https://www.instagram.com/" class="icon">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+            <li class="iconElem">
+                <a href="https://www.facebook.com/" class="icon">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li class="iconElem">
+                <a href="https://x.com/" class="icon">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+            <li class="iconElem">
+                <a href="https://workspace.google.com/intl/es-419/gmail/" class="icon">
+                    <ion-icon name="mail-unread-outline"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <p class="copyright">C. de Olite, 43, 31004 Pamplona, Navarra<br>@Año | Todos los derechos reservados</p>
+
+    </footer>
+    <!-- SCRIPTS -->
+    <!-- para IONICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- JS -->
+    <script src="./../js/scriptsPresupuesto.js"></script>
+</body>
+
+</html>
