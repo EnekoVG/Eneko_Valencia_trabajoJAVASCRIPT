@@ -10,7 +10,8 @@
         "production": 2016,
         "mileage": 5000,
         "image": "./../assests/images/index/bentleyContinental.jpg"
-    },{
+    },
+    {
         "model": "Dodge Charger",
         "production": 1970,
         "mileage": 10700,
