@@ -1,7 +1,12 @@
 const article = document.getElementById('modelContainer');
 
 fetch('./../assests/data/modelos.json')
-    .then(response => response.json())
+    .then((response) => {
+        if (response.ok) {
+            return response.json();
+        }
+        throw new Error("Error " + response.status + " al llamar al API: " + response.statusText);
+    })
     .then(data => {
         console.log(data);
 
@@ -16,3 +21,6 @@ fetch('./../assests/data/modelos.json')
             `
         });   
     })
+    .catch((error) => {
+        console.error(error)
+    });
