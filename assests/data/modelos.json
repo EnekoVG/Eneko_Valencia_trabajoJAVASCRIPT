@@ -3,18 +3,18 @@
         "model": "Ford Mustang",
         "production": 1969,
         "mileage": 12500,
-        "image": "../assests/images/index/mustang1969.jpg"
+        "image": "./../../Eneko_Valencia_trabajoJAVASCRIPT/assests/images/index/mustang1969.jpg"
     },
     {
         "model": "Bentley Continental GT",
         "production": 2016,
         "mileage": 5000,
-        "image": "../assests/images/index/bentleyContinental.jpg"
+        "image": "./../../Eneko_Valencia_trabajoJAVASCRIPT/assests/images/index/bentleyContinental.jpg"
     },
     {
         "model": "Dodge Charger",
         "production": 1970,
         "mileage": 10700,
-        "image": "../assests/images/index/dodgeCharger.jpg"
+        "image": "./../../Eneko_Valencia_trabajoJAVASCRIPT/assests/images/index/dodgeCharger.jpg"
     }
 ]
