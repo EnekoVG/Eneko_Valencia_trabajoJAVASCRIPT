@@ -1,6 +1,6 @@
 const article = document.getElementById('modelContainer');
 
-fetch('./../assests/data/modelos.json')
+fetch('../assests/data/modelos.json')
     .then(response => response.json())
     .then(data => {
         console.log(data);
