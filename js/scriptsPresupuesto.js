@@ -140,7 +140,6 @@ myForm.addEventListener("submit", function(event){
     budget!==0
     ){
         alert("Formulario enviado correctamente")
-        event.myForm.submit();
     } else {
         alert("Por favor, corrija los error en el formulario")
     }
