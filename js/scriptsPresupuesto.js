@@ -125,7 +125,6 @@ function validateCheckBox() {
 }
 
 myForm.addEventListener("submit", function(event){
-    event.preventDefault();
     validateName();
     validateSurname();
     validateTelephone();
@@ -139,35 +138,18 @@ myForm.addEventListener("submit", function(event){
     checkIn.classList.contains("valido") &&
     budget!==0)
     {
-        alert("Formulario enviado correctamente");
-
-        nameIn.classList.remove('invalido');
-        nameIn.classList.remove('valido');
-        document.getElementById('errorName').textContent = "";
-
-        surnameIn.classList.remove('invalido');
-        surnameIn.classList.remove('valido');
-        document.getElementById('errorSurname').textContent = "";
-
-        telephoneIn.classList.remove('invalido');
-        telephoneIn.classList.remove('valido');
-        document.getElementById('errorTelephone').textContent = "";
-
-        emailIn.classList.remove('invalido');
-        emailIn.classList.remove('valido');
-        document.getElementById('errorEmail').textContent = "";
-
-        document.getElementById('budget').textContent = "";
-
-        checkIn.classList.remove('invalido');
-        checkIn.classList.remove('valido');
-        event.myForm.reset();
+        resetForm();
+        alert("Formulario enviado correctamente");        
     } else {
         alert("Por favor, corrija los error en el formulario")
     }
 })
 
 myForm.addEventListener("reset", function(event){
+    resetForm();
+})
+
+function resetForm() {
     nameIn.classList.remove('invalido');
     nameIn.classList.remove('valido');
     document.getElementById('errorName').textContent = "";
@@ -188,5 +170,4 @@ myForm.addEventListener("reset", function(event){
 
     checkIn.classList.remove('invalido');
     checkIn.classList.remove('valido');
-    event.myForm.reset();
-})
+}
